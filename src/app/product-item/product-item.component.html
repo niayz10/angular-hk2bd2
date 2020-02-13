@@ -1,0 +1,15 @@
+<img [id]="product.id" [src]="product.images[0]" height="200px"/>
+<div *ngFor="let image of product.images">
+<ul>
+  <li><img [src]="image" (click)=" clickOnItem(image)" height="50px"/></li>
+</ul>
+</div>
+<h3>
+    <a [title]="product.name + ' details'" href="product.link">
+    {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
