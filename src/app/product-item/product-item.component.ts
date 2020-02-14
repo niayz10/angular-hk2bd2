@@ -14,4 +14,11 @@ export class ProductItemComponent implements OnInit {
   clickOnItem(image){
     (document.querySelector("#"+this.product.id) as HTMLImageElement).src = image;
   }
+  draw(cnt:number){
+    let star="";
+    for(let i=0;i<cnt;i++){
+       star+="*";
+    }
+   window.alert(star);
+  }
 }
